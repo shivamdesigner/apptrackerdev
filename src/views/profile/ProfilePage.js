@@ -26,7 +26,8 @@ const ProfilePage = () => {
     <>
       <Box sx={{ display: "flex", background: "#eef2f6", minHeight: "100vh", borderRadius: 5 , overflowX:"auto"}}>
         <Navbar />
-        <Box component="main" sx={{ flexGrow: 1, p: 3, mt: 10, marginInline: 4, borderRadius: 5, background: "#ffffff", height: "100%" }}>
+        <Box component="main" sx={{ flexGrow: 1, my: 10, background: "transparent", height: "100%", }}>
+        <Box sx={{ overflowX: 'auto', background: "#ffffff", p: 3, borderRadius: 5, marginInline: 4, my: 2 }}> 
           <Box
             component="form"
             noValidate
@@ -42,6 +43,7 @@ const ProfilePage = () => {
                     placeholder=''
                     id=""
                     label="name"
+                    value="Alexandru"
                   />
                 </FormControl>
 
@@ -55,6 +57,7 @@ const ProfilePage = () => {
                     id="outlined-adornment-Email"
                     label="Email"
                     type='email'
+                    value="alexandru765@gmail.com"
                   />
                 </FormControl>
               </Grid>
@@ -66,6 +69,7 @@ const ProfilePage = () => {
                     placeholder=''
                     id=""
                     label="mobile-number"
+                    value="727519354"
                   />
                 </FormControl>
               </Grid>
@@ -88,7 +92,7 @@ const ProfilePage = () => {
                           onMouseDown={handleMouseDownPassword}
                           edge="end"
                         >
-                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                          {showPassword ? <Visibility />  :<VisibilityOff /> }
                         </IconButton>
                       </InputAdornment>
                     }
@@ -115,7 +119,7 @@ const ProfilePage = () => {
                           onMouseDown={handleMouseDownConPassword}
                           edge="end"
                         >
-                          {showConPassword ? <VisibilityOff /> : <Visibility />}
+                          {showConPassword ?  <Visibility /> : <VisibilityOff /> }
                         </IconButton>
                       </InputAdornment>
                     }
@@ -125,11 +129,12 @@ const ProfilePage = () => {
                 </FormControl>
               </Grid>
               <Grid item lg={12} md={12} sm={12} xs={12}>
-                <Typography sx={{ mt: 3, width: "150px", marginInline: "auto" }} >
+                <Typography sx={{ mt: 3, width: "150px", marginLeft: "auto" }} >
                   <Button variant="contained" fullWidth to="/user-details" >Save</Button>
                 </Typography>
               </Grid>
             </Grid>
+          </Box>
           </Box>
         </Box>
       </Box>

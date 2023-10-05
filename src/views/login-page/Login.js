@@ -67,7 +67,7 @@ const Login = () => {
 
     return (
         <Typography sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: ` url(${bg}) ` , backgroundSize:"cover" }} component='div'>
-            <Card sx={{ maxWidth: 300, marginInline: 'auto', padding: 3, boxShadow:" rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
+            <Card sx={{ maxWidth: 350, marginInline: 'auto', padding: 3, boxShadow:" rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
                 <Box
                     component="div"
                     sx={{  width: '80px', height: '80px', marginInline: 'auto' }}
@@ -112,7 +112,7 @@ const Login = () => {
                                         onMouseDown={handleMouseDownPassword}
                                         edge="end"
                                     >
-                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                        {showPassword ?  <Visibility /> : <VisibilityOff />}
                                     </IconButton>
                                 </InputAdornment>
                             }
@@ -132,7 +132,7 @@ const Login = () => {
                     </Typography>
 
                     <Typography sx={{ mt: 3,textAlign:"center" }} component="div">
-                        <Button variant="contained"  to="/user-list" component={Link}  >Sign in</Button>
+                        <Button variant="contained"  to="/user" component={Link}  >Sign in</Button>
                     </Typography>
                 </Box>
             </Card>

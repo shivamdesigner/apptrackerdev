@@ -11,8 +11,8 @@ import IconButton from '@mui/material/IconButton';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import bg from "../../imgs/login bg/bg.jpg";
-import logo from '../../imgs/logo/logo.svg'; // Make sure to provide the correct path to your logo image
-import { Link } from 'react-router-dom';
+import logo from '../../imgs/logo/logo.svg'; 
+import { Link, Navigate } from 'react-router-dom';
 import { Button, ButtonGroup } from '@mui/material';
 
 
@@ -29,7 +29,7 @@ const ForgotPassword = () => {
     };
     return (
         <Typography sx={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',background: ` url(${bg}) ` , backgroundSize:"cover"  }} component='div'>
-            <Card sx={{ maxWidth: 300, marginInline: 'auto',  padding: 3, boxShadow:" rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
+            <Card sx={{ minWidth: 350, marginInline: 'auto',  padding: 3, boxShadow:" rgba(0, 0, 0, 0.35) 0px 5px 15px"}}>
             <Box
                     component="div"
                     sx={{  width: '80px', height: '80px', marginInline: 'auto' }}
@@ -48,9 +48,10 @@ const ForgotPassword = () => {
                 <Typography component="div" sx={{mt:2 , textAlign:'center'}} fullWidth >
                     Enter your Email Address
                 </Typography>
-                    <FormControl sx={{ mt: 3, minWidth:"300px" }} variant="outlined" fullWidth >
+                    <FormControl sx={{ mt: 3, Width:"100%" }} variant="outlined" fullWidth >
                         <InputLabel htmlFor="outlined-adornment-Email" >Email</InputLabel>
                         <OutlinedInput
+                            type='Email'
                             placeholder='Enter your Email'
                             id="outlined-adornment-Email"
                             label="Email"
@@ -58,7 +59,7 @@ const ForgotPassword = () => {
                     </FormControl>
 
                     <Typography sx={{ mt: 2,textAlign:"center" }} fullWidth>
-                        <Button variant="contained"   type='submit'>Submit</Button>
+                        <Button variant="contained"to="/otp" component={Link}   type='submit'>Submit</Button>
                     </Typography>
                 </Box>
             </Card>
